@@ -1,0 +1,342 @@
+.district-level {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  .dl-left,
+  .dl-right {
+    width: 810px;
+    height: 100%;
+
+    .doudou-card {
+      font-size: 20px;
+      font-family: Microsoft YaHei;
+      font-weight: 400;
+      color: #FFFFFF;
+      line-height: 31px;
+      height: 30%;
+    }
+
+    .abnormal-data {
+      height: 130px;
+      overflow: hidden;
+
+      .doudou-row {
+        height: 35px;
+        background: #176d9e5f;
+        font-size: 17px;
+        font-family: Microsoft YaHei;
+        font-weight: 400;
+        color: #91CCFF;
+        padding-right: 10px;
+
+        &:not(:first-child) {
+          margin-top: 10px;
+        }
+
+        .doudou-col-1 {
+          img {
+            transform: translate(10px, 2px);
+          }
+        }
+
+        .doudou-col-8 {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        .doudou-col-4 {
+          text-align: end;
+        }
+      }
+    }
+
+    .green-fangkong {
+      color: #91CCFF;
+      font-weight: 400;
+
+      .gf-icon {
+        position: relative;
+
+        img {
+          position: absolute;
+        }
+
+        img:nth-child(1) {
+          top: 20px;
+          left: 10px;
+          width: 190px;
+          height: 155px;
+          animation: breathingLamp 2s linear infinite;
+        }
+
+        img:nth-child(2) {
+          top: 10px;
+          left: 57px;
+        }
+
+        img:nth-child(3) {
+          top: 27px;
+          left: 76px;
+        }
+      }
+
+      .doudou-row {
+        justify-content: flex-start;
+
+        &:not(:first-child) {
+          margin-top: 20px;
+        }
+      }
+
+      .doudou-col-4 {
+        font-family: longzhoufeng;
+        font-size: 26px;
+      }
+    }
+
+    .planting-scale {
+      width: 100%;
+      height: 250px;
+
+      .doudou-col-5 {
+        height: 45px;
+        background: linear-gradient(1deg, rgba(33, 144, 247, 0.26) -7px, #ffffff00);
+        border-radius: 5px;
+        margin-top: 10px;
+        font-size: 17px;
+        font-family: Microsoft YaHei;
+        font-weight: 400;
+        color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        span {
+          color: #0078FF;
+          font-size: 26px;
+          font-family: longzhoufeng;
+          margin: 0 10px;
+          transform: translateY(-2px);
+        }
+      }
+
+      .ps-chart {
+        height: calc(100% - 45px);
+        padding-top: 15px;
+      }
+    }
+  }
+
+  .dl-right {
+    .energy-analysis {
+      height: 100%;
+      display: flex;
+      padding: 20px 0;
+      .ea-img{
+        position: relative;
+        width: 45%;
+        height: 85%;
+        transform: translateX(64px);
+        img{
+          position: absolute;
+          &.ea-img1 {
+            width: 100%;
+            bottom: 101px;
+            // transform-style: preserve-3d;
+            // transform: rotateY(75deg);
+            animation: rotate1 2s linear infinite;
+          }
+          &.ea-img2 {
+            width: 80%;
+            bottom: 177px;
+            opacity: 0;
+            // transform: translate(12%);
+            // transform-style: preserve-3d;
+            // transform: translate(12%) rotateX(75deg);
+            animation: wave 1s linear infinite;
+            animation-delay: 2s;
+            animation-duration: 2s;
+            transform: translateX(27px);
+          }
+          &.ea-img3 {
+            width: 60%;
+            bottom: 145px;
+            opacity: 0;
+            // transform: translate(31%);
+            // transform-style: preserve-3d;
+            // transform: translate(31%) rotateX(75deg);
+            animation: wave 1s linear infinite;
+            animation-delay: 1s;
+            animation-duration: 2s;
+            transform: translateX(59px);
+          }
+          &.ea-img4 {
+            width: 40%;
+            bottom: 107px;
+            opacity: 0;
+            // transform: translate(69%);
+            // transform-style: preserve-3d;
+            // transform: translate(69%) rotateX(75deg);
+            animation: wave 1s linear infinite;
+            animation-delay: 0;
+            animation-duration: 2s;
+            transform: translateX(90px);
+            
+          }
+          &.ea-img5 {
+            width: 100%;
+            bottom: 0px;
+          }
+        }
+      }
+      .ea-value{
+        position: relative;
+        width: 65%;
+        height: 100%;
+        padding-left: 170px;
+        transform: translateY(11px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-family: neirong;
+        .eav-item{
+          display: flex;
+          flex-direction: column;
+          color: #fff;
+          background-image: url('@/assets/village-level/qingyang/arr-bj.png');
+          background-size: 200px 100px;
+          background-repeat: no-repeat;
+          position: relative;
+          &::before{
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -40px;
+            width: 40px;
+            height: 40px;
+            background-image: url('@/assets/village-level/qingyang/arr.png');
+            background-size: cover;
+          }
+          .eavi-title{
+            font-size: 26px;
+          }
+          .eavi-value{
+            font-size: 49px;
+            margin-top: 10px;
+            display: inline-block;
+            height: 51px;
+            line-height: 49px;
+          }
+          &:not(:first-child) {
+            margin-top: 64px;
+          }
+          &:nth-child(1) {
+            .eavi-value{
+              background-image: linear-gradient(to right, #1D80E0, #fff); /* 渐变背景图片 */
+              -webkit-background-clip: text; /* 使用文本作为背景剪裁区域 */
+              color: transparent; /* 设置文字颜色为透明 */
+            }
+          }
+          &:nth-child(2) {
+            .eavi-value{
+              background-image: linear-gradient(to right, #71F7AA, #fff); /* 渐变背景图片 */
+              -webkit-background-clip: text; /* 使用文本作为背景剪裁区域 */
+              color: transparent; /* 设置文字颜色为透明 */
+            }
+          }
+          &:nth-child(3) {
+            .eavi-value{
+              background-image: linear-gradient(to right, #D0FC66, #fff); /* 渐变背景图片 */
+              -webkit-background-clip: text; /* 使用文本作为背景剪裁区域 */
+              color: transparent; /* 设置文字颜色为透明 */
+            }
+          }
+        }
+      }
+    }
+
+    .energy-proportion {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .ep-item{
+        width: 162px;
+        height: 162px;
+        background-image: url('@/assets/village-level/qingyang/circle-bj.png');
+        background-size: 100% 82%;
+        background-repeat: no-repeat;
+        position: relative;
+        .epi-proportion{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          font-size: 40px;
+          transform: translate(-50%, -50%);
+        }
+        .epi-title{
+          position: absolute;
+          left: 50%;
+          bottom: -40px;
+          font-size: 28px;
+          transform: translateX(-50%);
+        }
+        .ep-item_3{
+          transform: rotate(90deg);
+        }
+      }
+    }
+
+    
+  }
+}
+
+@keyframes wave {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes rotate1 {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  0% {
+    transform: translateY(0);
+  }
+}
+@keyframes rotate2 {
+  0% {
+    transform: translateX(12%) rotateX(75deg) rotateZ(0);
+  }
+  100% {
+    transform: translateX(12%) rotateX(75deg) rotateZ(360deg);
+  }
+}
+@keyframes rotate3 {
+  0% {
+    transform: translateX(31%) rotateX(75deg) rotateZ(0);
+  }
+  100% {
+    transform: translateX(31%) rotateX(75deg) rotateZ(-360deg);
+  }
+}
+@keyframes rotate4 {
+  0% {
+    transform: translateX(69%) rotateX(-75deg) rotateZ(0);
+  }
+  100% {
+    transform: translateX(69%) rotateX(-75deg) rotateZ(360deg);
+  }
+}

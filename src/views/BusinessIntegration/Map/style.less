@@ -1,0 +1,325 @@
+.bi-center {
+  width: calc(100% - 1900px);
+  height: 94%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 7px 0 0;
+  box-sizing: border-box;
+
+  .siwper_box {
+    width: 100%;
+    height: 170px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    .left,
+    .right {
+      position: relative;
+      width: 29px;
+      height: 47px;
+      cursor: pointer;
+    }
+
+    .right {
+      transform: rotate(180deg);
+    }
+
+    .swiper {
+      flex: 1 0;
+      height: 100%;
+      margin: 0 47px;
+      overflow: hidden;
+
+      .swiper-wrapper {
+        width: 100%;
+        height: 100%;
+        display: -webkit-box;
+
+        .swiper-slide {
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+
+          .container {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 28px;
+
+            .item {
+              width: 100%;
+              height: 100%;
+              background: linear-gradient(to bottom, #2190f78a, #2190f700);
+              border-top: 4px solid #218ff7;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+
+              .label {
+                font-family: Microsoft YaHei;
+                font-weight: 400;
+                font-size: 32px;
+                color: #ffffff;
+              }
+
+              .value {
+                font-family: D-DIN Exp;
+                font-weight: bold;
+                font-size: 45px;
+                margin-top: 5px;
+
+                span {
+                  font-family: Microsoft YaHei;
+                  font-weight: 400;
+                  font-size: 25px;
+                  color: #3fd0ff;
+                  background: linear-gradient(
+                    179deg,
+                    rgba(156, 235, 255, 0.5) 0%,
+                    rgba(255, 255, 255, 0.5) 100%
+                  );
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                  margin-left: 16px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .canvas {
+    position: relative;
+    width: 100%;
+    flex: 1 0;
+    padding: 87px 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+
+    .dizuo {
+      position: absolute;
+      width: 90%;
+      bottom: 87px;
+    }
+
+    .blink {
+      position: absolute;
+      width: 48%;
+      top: 0;
+      margin-left: 20px;
+      animation: blink-animation 2s infinite linear; /* 持续时间为 1 秒，无限循环 */
+    }
+
+    /* 定义闪烁的关键帧动画 */
+    @keyframes blink-animation {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.3;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .item {
+      position: absolute;
+      background: url("@/assets/business-integration/green-icon.png") no-repeat;
+      background-size: 100% 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Microsoft YaHei;
+      font-weight: 400;
+      font-size: 38px;
+      color: #ffffff;
+      // margin-left: 65px;
+    }
+
+    .blue {
+      background: url("@/assets/business-integration/blue-icon.png") no-repeat;
+      background-size: 100% 100%;
+    }
+
+    .item1 {
+      top: 58px;
+      left: 473px;
+      width: 236px;
+      height: 236px;
+      animation: hover-animation1 3s infinite linear; /* 应用关键帧动画 */
+    }
+
+    .item2 {
+      top: 340px;
+      left: 722px;
+      width: 182px;
+      height: 182px;
+      animation: hover-animation2 3s infinite linear; /* 应用关键帧动画 */
+    }
+
+    .item3 {
+      top: 471px;
+      left: 1026px;
+      width: 139px;
+      height: 139px;
+      animation: hover-animation1 3s infinite linear; /* 应用关键帧动画 */
+    }
+
+    .item4 {
+      top: 456px;
+      left: 486px;
+      width: 160px;
+      height: 160px;
+      animation: hover-animation1 3s infinite linear; /* 应用关键帧动画 */
+    }
+
+    .item5 {
+      top: 158px;
+      left: 988px;
+      width: 182px;
+      height: 182px;
+      animation: hover-animation2 3s infinite linear; /* 应用关键帧动画 */
+    }
+
+    @keyframes hover-animation1 {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-30px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes hover-animation2 {
+      0% {
+        transform: translateY(-30px);
+      }
+      50% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-30px);
+      }
+    }
+
+    .labels {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 150px;
+    }
+
+    .center_imgs {
+      position: absolute;
+      bottom: 12%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 0 30px;
+      box-sizing: border-box;
+
+      .img_item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        img {
+          width: 120px;
+          height: 120px;
+        }
+
+        span {
+          font-family: Microsoft YaHei;
+          font-weight: 400;
+          font-size: 32px;
+          color: #ffffff;
+          margin-top: 33px;
+        }
+
+        &:nth-child(1) {
+          transform: rotate3d(0, 1, 1, 20deg) translateY(-90px);
+          &:hover {
+            transform: rotate3d(0, 1, 1, 20deg) translateY(-90px) scale(1.2);
+          }
+        }
+
+        &:nth-child(2) {
+          transform: rotate3d(0, 1, 1, 10deg) translateY(-28px);
+          &:hover {
+            transform: rotate3d(0, 1, 1, 10deg) translateY(-28px) scale(1.2);
+          }
+        }
+
+        &:nth-child(3) {
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+
+        &:nth-child(4) {
+          transform: rotate3d(0, 1, 1, -10deg) translateY(-28px);
+          &:hover {
+            transform: rotate3d(0, 1, 1, -10deg) translateY(-28px) scale(1.2);
+          }
+        }
+
+        &:nth-child(5) {
+          transform: rotate3d(0, 1, 1, -20deg) translateY(-90px);
+          &:hover {
+            transform: rotate3d(0, 1, 1, -20deg) translateY(-90px) scale(1.2);
+          }
+        }
+      }
+    }
+  }
+
+  .card {
+    height: 28.3%;
+    .nc-card-title {
+      background-image: url("@/assets/business-integration/title_bac.png");
+      background-size: 102% 100%;
+      background-repeat: no-repeat;
+      background-position-y: 6px;
+      background-position-x: -6px;
+    }
+
+    .nc-ct-span {
+      transform: translate(180px, 2px);
+    }
+
+    .charts {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 50px;
+
+      .box {
+        display: flex;
+        flex-direction: column;
+
+        .chart {
+          flex: 1 0;
+        }
+      }
+    }
+  }
+}

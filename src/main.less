@@ -1,0 +1,213 @@
+@font-face {
+  font-family: neirong; //自定义字体名称
+  src: url('./assets/font/D-DINExp.otf');
+}
+@font-face {
+  font-family: biaoti; //自定义字体名称
+  src: url('./assets/font/ysbt.ttf');
+}
+
+@import './styles/initialization.less';
+
+:root {
+  --doudou-white: #ffffff;
+  --doudou-white-soft: #f8f8f8;
+  --doudou-white-mute: #f2f2f2;
+
+  --doudou-black: #181818;
+  --doudou-black-soft: #222222;
+  --doudou-black-mute: #282828;
+
+  --doudou-indigo: #2c3e50;
+
+  --doudou-text-light-1: var(--doudou-indigo);
+  --doudou-text-light-2: rgba(60, 60, 60, 0.66);
+}
+
+@keyframes breathingLamp {
+  0% {
+    opacity: 0.2;
+  }
+
+  25% {
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 0.4;
+  }
+
+  100% {
+    opacity: 0.2;
+  }
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #000d20;
+}
+
+.text-indent{
+  text-indent: 40px;
+  display: inline-block;
+}
+
+// 父元素必须设置相对或者绝对定位
+.position-center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.doudou-row{
+  display: flex;
+  justify-content: space-between;
+}
+.doudou-row-sa{
+  display: flex;
+  justify-content: space-around;
+}
+.doudou-col-1{
+  width: 8.33333333%;
+  height: 100%;
+}
+.doudou-col-2{
+  width: 16.66666666%;
+  height: 100%;
+}
+.doudou-col-3{
+  width: 24.99999999%;
+  height: 100%;
+}
+.doudou-col-4{
+  width: 33.33333333%;
+  height: 100%;
+}
+.doudou-col-5{
+  width: 41.66666666%;
+  height: 100%;
+}
+.doudou-col-6{
+  width: 50%;
+  height: 100%;
+}
+.doudou-col-7{
+  width: 58.33333333%;
+  height: 100%;
+}
+.doudou-col-8{
+  width: 66.66666666%;
+  height: 100%;
+}
+.doudou-col-9{
+  width: 74.99999999%;
+  height: 100%;
+}
+.doudou-col-10{
+  width: 83.33333333%;
+  height: 100%;
+}
+.doudou-col-11{
+  width: 91.66666666%;
+  height: 100%;
+}
+.doudou-col-12{
+  width: 100%;
+  height: 100%;
+}
+
+.common-subtitle{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 52px;
+  padding: 0 100px;
+  font-size: 26px;
+  background-image: url('@/assets/achievement-aggregation/icon-bj-4.png');
+  background-size: 100% 82%;
+  background-repeat: no-repeat;
+}
+
+.doudou-tab-item{
+  background-image: url('@/assets/artificial-intelligence/weixuanzhong.png');
+  background-size: 90% 100%;
+  background-repeat: no-repeat;
+  background-position-x: 16px;
+  height: 56px;
+  font-size: 28px;
+  color: #0084FF;
+  text-align: center;
+  line-height: 56px;
+  cursor: pointer;
+  &.doudou-tab-item_active{
+    background-image: url('@/assets/artificial-intelligence/xuanzhong.png');
+    color: #ffffff;
+  }
+}
+
+@keyframes hover-animation1 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes hover-animation2 {
+  0% {
+    transform: translateY(-30px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-30px);
+  }
+}
+
+/* 针对WebKit浏览器 */
+/* 滚动条整体样式 */
+::-webkit-scrollbar {
+  width: 10px; /* 滚动条宽度 */
+}
+
+/* 滑块样式 */
+::-webkit-scrollbar-thumb {
+  background-color: #0084ff31; /* 滑块背景颜色 */
+  border-radius: 5px; /* 滑块圆角 */
+}
+
+/* 轨道样式 */
+::-webkit-scrollbar-track {
+  background-color: #0084ff28; /* 轨道背景颜色 */
+}
+
+/* 非WebKit浏览器（如Firefox） */
+/* 滚动条整体样式 */
+scrollbar {
+  width: 10px; /* 滚动条宽度 */
+}
+
+/* 滑块样式 */
+scrollbar-thumb {
+  background-color: rgba(136, 136, 136, 0.396); /* 滑块背景颜色 */
+  border-radius: 5px; /* 滑块圆角 */
+}
+
+/* 轨道样式 */
+scrollbar-track {
+  background-color: #f1f1f180; /* 轨道背景颜色 */
+}

@@ -1,0 +1,182 @@
+.home_root {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+
+  .container {
+    background-repeat: no-repeat !important;
+    background-size: 100% 100% !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: top left;
+    width: 3840px;
+    height: 2160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .back {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: url("../../assets/common/bg4.png") no-repeat;
+      background-size: 100% 100%;
+      pointer-events: none;
+    }
+
+    .swiper {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+
+      .swiper-wrapper {
+        width: 100%;
+        height: 100%;
+        display: -webkit-inline-box;
+
+        .swiper-slide {
+          width: 100%;
+          height: 100%;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+
+    .home_topbar {
+      position: absolute;
+      top: 0;
+      width: 50%;
+      height: 190px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: translateY(-8px);
+      font-size: 93px;
+      font-family: biaoti;
+      font-weight: 600;
+      color: #cfe2ff;
+      .logo {
+        width: 1000px;
+        transform: translate(15px, 0px);
+      }
+    }
+
+    // .home_title {
+    //   top: 496px;
+    //   position: absolute;
+    //   overflow: hidden;
+
+    //   img {
+    //     animation: mask 3s; /* 设置动画名称和持续时间 */
+    //     animation-fill-mode: forwards; /* 动画结束后保持最后的状态 */
+    //     opacity: 0; /* 初始透明度为0 */
+    //   }
+    // }
+
+    @keyframes mask {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .caidan {
+      position: absolute;
+      width: 100%;
+      top: 1208px;
+      padding: 0 306px;
+      box-sizing: border-box;
+      // height: 695px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-gap: 154px;
+
+      .item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        &:hover {
+          transform: scale(1.2);
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+
+        span {
+          position: absolute;
+          top: 360px;
+          font-family: biaoti;
+          font-weight: 400;
+          font-size: 66px;
+          color: #e9edf5;
+          background: linear-gradient(
+            -45deg,
+            rgba(206, 213, 227, 1) 0%,
+            rgba(255, 255, 255, 1) 44.23828125%,
+            rgba(180, 195, 223, 1) 99.12109375%
+          );
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+
+    .tips {
+      position: absolute;
+      width: 100%;
+      padding: 0 115px;
+      top: 125px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .date {
+        font-family: "neirong";
+        font-weight: 400;
+        font-size: 40px;
+        color: #cfe2ff;
+      }
+
+      .weather {
+        display: flex;
+        align-items: center;
+        font-family: "neirong";
+        font-weight: 400;
+        font-size: 40px;
+        color: #cfe2ff;
+
+        img {
+          width: 60px;
+          height: 60px;
+          margin-left: 24px;
+        }
+      }
+    }
+
+    #canvasDian {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+    }
+  }
+}

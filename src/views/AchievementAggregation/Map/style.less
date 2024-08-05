@@ -1,0 +1,68 @@
+.aa-center {
+  width: calc(100% - 1530px);
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-image: url('@/assets/achievement-aggregation/particle.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: -155px 108px;
+  .aac-animation-imgs{
+    flex: 1;
+    flex-shrink: 0;
+    position: relative;
+    transform: translate(6px, 240px);
+    .aacai-mv{
+      width: 100%;
+    }
+    .aacaim-light{
+      width: 1164px;
+      position: absolute;
+      top: -227px;
+      left: 416px;
+      animation: aacaimlight 1.5s infinite;
+    }
+    .aacaim-building{
+      position: absolute;
+      top: -72px;
+      left: 775px;
+      width: 450px;
+      animation: hover-animation1 3s infinite linear;
+    }
+    .aaca-circle{
+      position: absolute;
+      top: 121px;
+      left: 62px;
+      width: 1669px;
+      height: 584px;
+      border-radius: 50%;
+    }
+  }
+}
+
+@keyframes aacaimlight {
+ 
+  0% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.3;
+  }
+}
+@keyframes rotateAnimation {
+  0% {
+    transform: translate3d(4px, 48px, 0) scale3d(0.8, 0.6, 1); /* 从0度开始旋转 */
+  }
+  50% {
+    transform: translate3d(4px, 48px, 0) scale3d(0.9, 0.65, 1); /* 旋转一周，360度 */
+  }
+  0% {
+    transform: translate3d(4px, 48px, 0) scale3d(0.8, 0.6, 1); /* 从0度开始旋转 */
+  }
+}

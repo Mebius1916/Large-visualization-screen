@@ -1,0 +1,8 @@
+{
+  "list": [
+    { "color": "#218FF7", "name": "纳入管控企业数量", "value": 27, "unit": "家" },
+    { "color": "#00FF96", "name": "纳入监测企业数量", "value": 27, "unit": "家" },
+    { "color": "#FFE16A", "name": "月度综合能耗", "value": 35804.39, "unit": "KW/h" },
+    { "color": "#008AFF", "name": "月度碳排放总量", "value": 35804.39, "unit": "KW/h" }
+  ]
+}

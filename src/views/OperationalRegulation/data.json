@@ -1,0 +1,10 @@
+{
+  "list": [
+    { "color": "#218FF7", "name": "办公场所", "value": 12, "unit": "所" },
+    { "color": "#00FF96", "name": "变电站", "value": 95, "unit": "座" },
+    { "color": "#FFE16A", "name": "供电所", "value": 55, "unit": "个" },
+    { "color": "#008AFF", "name": "机房终端", "value": 4575, "unit": "座" },
+    { "color": "#6CD7FF", "name": "机柜", "value": 5641, "unit": "面" },
+    { "color": "#958DE1", "name": "网络设备", "value": 607, "unit": "台" }
+  ]
+}
